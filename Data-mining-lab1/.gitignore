@@ -1,0 +1,34 @@
+data/_truth
+data/sales
+data_2/_truth
+data_2/notices
+data_2/labelled_pairs.csv
+lake
+
+# Generated local analytical stores and runtime database files
+warehouse.duckdb
+warehouse.duckdb.wal
+setubid/setubid.db
+setubid/setubid.db-wal
+setubid/setubid.db-shm
+
+# Python local state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local configuration and execution output
+.env
+.env.*
+*.log
+run-output.txt
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/

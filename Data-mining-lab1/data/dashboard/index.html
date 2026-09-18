@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Annapurna Data | Finance dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside>
+    <div class="brand"><b>A</b><span>Annapurna<em>/data</em></span></div>
+    <nav>
+      <a class="active" href="#overview">⌘ <span>Overview</span></a>
+      <a href="#explorer">◫ <span>Revenue explorer</span></a>
+      <a href="#products">◇ <span>Product & price</span></a>
+      <a href="#quality">✓ <span>Data quality</span></a>
+      <a href="#lineage">↗ <span>Lineage</span></a>
+    </nav>
+    <footer><p><i></i> Warehouse healthy</p><small>Last pipeline run<br><strong>18 Sep 2026 · 12:01</strong></small></footer>
+  </aside>
+  <main>
+    <header>
+      <div><label>FINANCE COMMAND CENTRE</label><h1>One trusted sales number.</h1><p>Revenue, historical prices and source quality across all 12 Annapurna stores.</p></div>
+      <div class="user"><button title="Notifications">♧<sup></sup></button><b>AK</b></div>
+    </header>
+    <section class="filters">
+      <button class="filter selected"><small>Period</small><strong>Oct 2024</strong>⌄</button>
+      <button class="filter"><small>Store</small><strong>All 12 stores</strong>⌄</button>
+      <button class="filter"><small>Category</small><strong>All categories</strong>⌄</button>
+      <button id="refresh">↻ Refresh data</button>
+    </section>
+    <section id="overview" class="metrics">
+      <article class="revenue">
+        <div class="top"><mark>● CLOSED MONTH</mark><span>•••</span></div>
+        <small>NET REVENUE</small><h2>₹56.36M</h2><p class="up">↗ 26.3% <span>vs Sep 2024</span></p>
+        <svg viewBox="0 0 600 100" preserveAspectRatio="none" aria-label="Monthly revenue trend"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#aae4d4"/><stop offset="1" stop-color="#aae4d4" stop-opacity="0"/></linearGradient></defs><path fill="url(#g)" d="M0 80L55 75 110 65 165 70 220 50 275 56 330 38 385 47 440 18 495 32 550 24 600 28V100H0Z"/><path d="M0 80L55 75 110 65 165 70 220 50 275 56 330 38 385 47 440 18 495 32 550 24 600 28" fill="none" stroke="#08745f" stroke-width="3"/></svg>
+        <div class="months"><span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Dec</span></div>
+      </article>
+      <article class="metric"><b class="icon green">▣</b><small>SALES LINES</small><h3>789,516</h3><p class="up">✓ Reconciled & deduplicated</p></article>
+      <article class="metric"><b class="icon purple">◷</b><small>HISTORICAL PRICES</small><h3>4,320</h3><p>Price revisions preserved</p></article>
+      <article class="metric"><b class="icon orange">⌁</b><small>DATA FRESHNESS</small><h3>02:30</h3><p>Daily local-time landing</p></article>
+    </section>
+    <section id="explorer" class="title"><div><label>REVENUE EXPLORER</label><h2>How October was made</h2></div><button>View full report →</button></section>
+    <section class="two">
+      <article class="panel"><div class="panel-head"><div><h3>Revenue by category</h3><p>Net of returns, discounts & voids</p></div><button>October 2024⌄</button></div><div id="bars"></div></article>
+      <article class="panel"><div class="panel-head"><div><h3>Top stores</h3><p>Ranked by net revenue</p></div><mark class="grey">12 stores</mark></div>
+        <ol><li><b>01</b><div><strong>Jayanagar</strong><small>Bengaluru · South</small></div><em>₹5.12M</em></li><li><b>02</b><div><strong>T Nagar</strong><small>Chennai · South</small></div><em>₹4.98M</em></li><li><b>03</b><div><strong>Rajouri Garden</strong><small>New Delhi · North</small></div><em>₹4.87M</em></li><li><b>04</b><div><strong>Koramangala</strong><small>Bengaluru · South</small></div><em>₹4.66M</em></li></ol><button class="link">See store performance →</button>
+      </article>
+    </section>
+    <section id="quality" class="title quality"><div><label>FINANCE CONTROL</label><h2>Reconciliation status</h2></div><mark>● 9 months matched exactly</mark></section>
+    <article class="panel table"><table><thead><tr><th>Month</th><th>Warehouse revenue</th><th>Finance close</th><th>Variance</th><th>Resolution</th></tr></thead><tbody><tr><td>Mar 2024</td><td>₹41,971,649.09</td><td>₹42,457,899.09</td><td class="warn">+₹486,250.00</td><td><mark class="amber">Scope adjustment</mark> Institutional invoice outside till</td></tr><tr><td>Jul 2024</td><td>₹40,295,160.11</td><td>₹40,527,291.81</td><td class="warn">+₹232,131.70</td><td><mark class="amber">Source gap</mark> Three S07 files missing</td></tr><tr><td>Dec 2024</td><td>₹50,745,259.48</td><td>₹50,745,209.00</td><td class="warn">−₹50.48</td><td><mark class="blue">Rounding</mark> Finance rounds per bill</td></tr></tbody></table><p class="table-note">Defined business differences—not pipeline defects. <a href="#lineage">See audit trail →</a></p></article>
+    <section id="products" class="price"><b>₹</b><div><label>HISTORICAL PRICE PROTECTION</label><h2>March uses March’s prices.</h2><p>Every sale resolves to the product and price valid on its business date, even after a product code is reused.</p></div><button id="compare">Compare March & December →</button></section>
+    <section id="lineage" class="lineage"><div><label>TRUST & LINEAGE</label><h2>Every number is traceable.</h2><p>From nightly till export to board-ready answer, every transformation is auditable.</p></div><div class="steps"><article><b>01</b><strong>Raw sales files</strong><small>4,457 immutable exports</small></article><i>→</i><article><b>02</b><strong>Validated lines</strong><small>Bill-line deduplication</small></article><i>→</i><article><b>03</b><strong>Warehouse model</strong><small>Facts + dimensions</small></article><i>→</i><article><b>04</b><strong>Trusted dashboard</strong><small>One finance number</small></article></div></section>
+  </main>
+  <div id="toast">Data is already current</div>
+  <script src="app.js"></script>
+</body>
+</html>

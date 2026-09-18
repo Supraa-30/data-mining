@@ -1,0 +1,3 @@
+query,layout,possible_files_opened,possible_bytes_opened
+"store=S01, month=2024-10",partitioned store/year/month,31,846899
+"store=S01, month=2024-10",flat folder,4457,68706877
